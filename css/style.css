@@ -8,7 +8,7 @@
 :root{
     --black: #000;
     --White: #FFFF;
-    --main-color: #002929;
+    --main-color: #095881;
     --secondary-color: #02300a;
     --main-font-family: 'Poppins', sans-serif;
     --secondary-font-family: 'Roboto', sans-serif;
@@ -27,18 +27,20 @@ body{
 .container{
     display: flex;
     justify-content: center;
+    margin-bottom: 130px;
 }
 /* BG-Animation */
 .top-banner-area{
     width: 1080px;
-    background-image: linear-gradient(45deg, var(--main-color), var(--secondary-color));
+    /* height: 97vh; */
+    background: linear-gradient(60deg,#005AA7, #bbc1e0, #005AA7);
     overflow: hidden;
     background-size: 400% 400%;
     animation: gradient-bg 15s ease infinite;
     border-radius: 20px;
     margin-top: 50px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
-    padding: 30px;
+    padding-left: 100px;
 }
 
 @keyframes gradient-bg
@@ -58,12 +60,226 @@ body{
 .top-banner{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
     justify-content: center;
     align-items: center;
 }
 .banner-details{
     width: 100%;
 }
+.banner-details h1{
+    text-shadow: -1px -2px 2px ;
+    color:var(--White);
+    font-family: var(--main-font-family);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+}
+.banner-details p{
+    color: var(--White);
+    width: 506px;
+    height: 78px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+}
+.button a{
+    outline: none;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: var(--White);
+    color: var(--main-color);
+    border-radius: 3px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+.button a:hover {
+    background-color: #085780;
+    color: white;
+    transition: all 0.2s ease-in;
+}
 .banner-profile img{
+    width: 80%;
+}
+/* -------------------------------------------------------------------------- */
+/*                           Blog Area Design Start                           */
+/* -------------------------------------------------------------------------- */
+.details-area{
+    width: 1190px;
+    
+}
+.content-details{
     width: 100%;
+    display: flex;
+    justify-content: center;
+    grid-column-gap: 30px;
+
+    
+}
+.blogs-item{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 30px;
+}
+
+.side-menu{
+    display: flex;
+    justify-content: center;
+    
+}
+.menu {
+    width: 332px;
+    height: 332px;
+    background: linear-gradient(60deg,#005AA7, #bbc1e0, #005AA7);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-bar{
+    width: 252px;
+    height: 64px;
+    margin-bottom: 10px;
+    background-color: var(--White);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+
+}
+.menu-bar:hover{
+    background-color: #085780;
+    color: white;
+    transition: all 0.2s ease-in;
+
+}
+#active{
+    color: var(--White);
+    background-color: #005AA7;
+   
+}
+.menu a{
+    text-decoration: none;
+    color: black;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+
+}
+.blog {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+    padding: 20px;
+    border-radius: 8px;
+}
+.blog img{
+    width: 100%;
+}
+.btn {
+    padding: 5px 10px;
+    border: none;
+    background: var(--main-color);
+    color: white;
+    border-radius: 3px;
+}
+.blog-details h2{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+}
+.rating{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.time {
+    
+    padding: 6px;
+    border-radius: 23px;
+    width: 50px;    
+    height: 17px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--main-color);
+}
+
+/* -------------------------------------------------------------------------- */
+/*                       ===Footer Area Design Start===                       */
+/* -------------------------------------------------------------------------- */
+footer{
+    height: 60vh;
+    background: linear-gradient(60deg,#005AA7, #bbc1e0, #005AA7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.footer-details{
+    
+}
+.brand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+#footer-logo{
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+hr{
+ margin-top: 30px;   
+ margin-bottom: 30px;   
+}
+.social{
+    display: flex;
+    justify-content: space-around;
+}
+.social a {
+    width: 32px;
+    height: 32px;
+    background-color: var(--White);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    text-decoration: none;
+}
+.social a:hover {
+    background-color: var(--main-color);
+    transition: all 0.2s ease-in;
+    color: white;
+
+}
+.social-icons {
+    color:var(--main-color);
+    text-decoration: none;
+    font-size: 20px;
+}
+.social-icons:hover {
+    color:var(--White);
+    text-decoration: none;
+    font-size: 20px;
+}
+/* -------------------------------------------------------------------------- */
+/*                     ===Media Query For Mobile Device===                    */
+/* -------------------------------------------------------------------------- */
+@media only screen and (max-width: 668px) {
+    .banner-details, .banner-profile img {
+        width: 100%;
+        text-align: center;
+    }
+    .top-banner{
+        width: 100%;
+        grid-template-columns: repeat(1, 1fr);
+
+    }
 }

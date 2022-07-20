@@ -8,7 +8,7 @@
 :root{
     --black: #000;
     --White: #FFFF;
-    --main-color: #095881;
+    --main-color: #005AA7;
     --secondary-color: #02300a;
     --main-font-family: 'Poppins', sans-serif;
     --secondary-font-family: 'Roboto', sans-serif;
@@ -27,12 +27,11 @@ body{
 .container{
     display: flex;
     justify-content: center;
-    margin-bottom: 130px;
+    margin-bottom: 100px;
 }
 /* BG-Animation */
 .top-banner-area{
     width: 1080px;
-    /* height: 97vh; */
     background: linear-gradient(60deg,#005AA7, #bbc1e0, #005AA7);
     overflow: hidden;
     background-size: 400% 400%;
@@ -40,7 +39,7 @@ body{
     border-radius: 20px;
     margin-top: 50px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
-    padding-left: 100px;
+
 }
 
 @keyframes gradient-bg
@@ -60,13 +59,14 @@ body{
 .top-banner{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 30px;
+    grid-column-gap: 6  0px;
     grid-row-gap: 30px;
     justify-content: center;
     align-items: center;
 }
 .banner-details{
     width: 100%;
+    margin-left: 50px;
 }
 .banner-details h1{
     text-shadow: -1px -2px 2px ;
@@ -105,7 +105,7 @@ body{
 /*                           Blog Area Design Start                           */
 /* -------------------------------------------------------------------------- */
 .details-area{
-    width: 1190px;
+    width: 1080px;
     
 }
 .content-details{
@@ -137,6 +137,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
 }
 
 .menu-bar{
@@ -148,17 +149,18 @@ body{
     justify-content: center;
     align-items: center;
     border-radius: 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
 
 }
 .menu-bar:hover{
-    background-color: #085780;
+    background-color: var(--main-color);
     color: white;
     transition: all 0.2s ease-in;
 
 }
 #active{
-    color: var(--White);
     background-color: #005AA7;
+    color: var(--White);
    
 }
 .menu a{
@@ -167,6 +169,8 @@ body{
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
+    
+    
 
 }
 .blog {
@@ -206,12 +210,39 @@ body{
     align-items: center;
     color: var(--main-color);
 }
-
+/* -------------------------------------------------------------------------- */
+/*                        ===See More Button Design===                        */
+/* -------------------------------------------------------------------------- */
+.see-more {
+    display: flex;
+    justify-content: center;
+    padding: 10px 20px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+.see-more-button{
+    display: none;
+}
+.see a{
+    outline: none;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #1D6AB0;
+    color: var(--White);
+    border-radius: 3px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+.see a:hover {
+    background-color: var(--main-color);
+    color: white;
+    transition: all 0.2s ease-in;
+}
 /* -------------------------------------------------------------------------- */
 /*                       ===Footer Area Design Start===                       */
 /* -------------------------------------------------------------------------- */
 footer{
-    height: 60vh;
+    padding-top: 50px;
+    padding-bottom: 50px;
     background: linear-gradient(60deg,#005AA7, #bbc1e0, #005AA7);
     display: flex;
     justify-content: center;
@@ -219,9 +250,6 @@ footer{
     
 }
 
-.footer-details{
-    
-}
 .brand {
     display: flex;
     justify-content: center;
@@ -229,19 +257,39 @@ footer{
     flex-direction: column;
     color: white;
 }
-#footer-logo{
+#footer-logo {
     font-size: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--main-color);
 }
-hr{
- margin-top: 30px;   
- margin-bottom: 30px;   
+#line-1{
+    width: 50%;
+    border-bottom: 1px solid var(--main-color);
+    margin-top: 30px;   
+    margin-bottom: 30px;   
 }
-.social{
+#line-2{
+    width: 20%;
+    border-bottom: 1px solid var(--main-color);
+    margin-top: 30px;   
+    margin-bottom: 30px;   
+}
+.others-navigation{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
+}
+.footer-nav a {
+    text-decoration: none;
+    padding: 0px 20px;
+    color: var(--White);
+}
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .social a {
     width: 32px;
@@ -252,6 +300,7 @@ hr{
     align-items: center;
     border-radius: 20px;
     text-decoration: none;
+    margin-left: 10px;
 }
 .social a:hover {
     background-color: var(--main-color);
@@ -272,14 +321,121 @@ hr{
 /* -------------------------------------------------------------------------- */
 /*                     ===Media Query For Mobile Device===                    */
 /* -------------------------------------------------------------------------- */
+
 @media only screen and (max-width: 668px) {
-    .banner-details, .banner-profile img {
+    .header{
+            margin-top: -60px;
+    }
+    
+    .banner-details {
         width: 100%;
+    }
+    .container {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
         text-align: center;
     }
-    .top-banner{
+    .top-banner-area{
+        padding: 0px;
+    }
+    .banner-details p {
+        color: var(--White);
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+    }
+    .banner-profile img {
+        width: 100%;
+    }
+    .top-banner {
         width: 100%;
         grid-template-columns: repeat(1, 1fr);
+        justify-content: center;
+        align-items: center;
+    }
 
+   .blogs-item{
+        margin-top: 30px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .content-details {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        grid-column-gap: 30px;
+        flex-direction: column;
+    }
+    .menu {
+        width: 100%;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: rgb(50 50 93 / 25%) 0px 30px 60px -12px, rgb(0 0 0 / 30%) 0px 18px 36px -18px;
+    }
+    .others-navigation {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    /* View All Button Disable In Mobile Screen*/
+    .see-more {
+        display: none;
+    }
+
+}
+/* -------------------------------------------------------------------------- */
+/*                     ===Media Query For Tab Device===                    */
+/* -------------------------------------------------------------------------- */
+
+@media only screen and (min-width: 669px) and (max-width: 990px) {
+    .top-banner {
+        grid-template-columns: repeat(2, 1fr);
+        padding-left: 0px;
+
+    }
+    .top-banner-area{
+        width: 100%;
+    }
+    .banner-details {
+        width: 100%;
+        margin-bottom: 29px;
+    }
+    .banner-details p {
+        color: var(--White);
+        width: 100%;
+        height: 100%;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+    }
+    .blogs-item {
+        grid-template-columns: 1fr 1fr ;    
+    }
+    .content-details {
+        flex-direction: column;
+    }
+    .banner-profile img {
+        width: 100%;
+    }
+    .menu {
+        width: 100%;
+        height: 100%;
+        padding: 10px 0px;
+        flex-direction: row;
+    }
+    .menu-bar{
+        margin-left: 10px;
+    }
+    .see-more-button{
+        display: block;
+    }
+    .others-navigation {
+        flex-wrap: wrap;
     }
 }

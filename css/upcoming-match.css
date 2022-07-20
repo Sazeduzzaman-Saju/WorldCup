@@ -1,0 +1,52 @@
+.all-shedule {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px 20px;
+    
+}
+.matches{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+    padding: 20px;
+}
+.match{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.match-details{
+    text-align: center;
+}
+.country-flag{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+.country-flag img{
+    width: 40%
+}
+
+.match-details h1{
+    font-size: ;
+}
+.match p{
+    padding: 10px;
+}
+
+/* -------------------------------------------------------------------------- */
+/*              ===@ Media Query Start For Only Match Section===              */
+/* -------------------------------------------------------------------------- */
+
+@media only screen and (max-width: 668px) {
+    .all-shedule {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (min-width: 669px) and (max-width: 990px) {
+    .all-shedule {
+        grid-template-columns: 1fr 1fr;
+    }
+}
